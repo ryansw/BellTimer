@@ -7,12 +7,25 @@ const Wrap = styled.p`
 `;
 
 class Player extends Component {
+  componentDidMount() {
+    this.canvas = this.refs.canvas;
+    this.ctx = this.canvas.getContext("2d");
+    this.ctx.font = "40px Monospace";
+    this.ctx.fillText("Hello, World! (canvas!)", 0, 50);
+  }
+
   render() {
     return (
-      <div className="Player">
-        You are on <b>{this.props.match.params.system}</b>.<br />
-        <pre>{JSON.stringify(this.props.match)}</pre>
-        Here comes the part where I build a whole new player in...
+      <div
+        className="Player"
+        style={{ padding: 0, margin: 0, overflow: "hidden" }}
+      >
+        <canvas
+          ref="canvas"
+          width={document.documentElement.clientWidth}
+          height={document.documentElement.clientHeight - 50}
+          style={{ padding: 0, margin: 0 }}
+        />
       </div>
     );
   }
