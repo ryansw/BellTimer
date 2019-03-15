@@ -1,0 +1,846 @@
+{
+  "__comment": "Date Code is Year - 1900, (eg 2017 = 117), month - 1, and day. EG Feb 25, 2017 = 1170125",
+
+  "Description": "Silver Valley Bell System",
+  "Name": "Silver Valley High School",
+  "Path": "svhs",
+
+  "Schedules": [
+    {
+      "Dates": [1180229],
+      "Description": "PBIS Day",
+      "DisplayName": "PBIS Day",
+      "Events": [
+        {
+          "Description": "First Period Starts",
+          "Message": "First Period",
+          "Name": "First Period Starts",
+          "Time": 26400
+        },
+        {
+          "Description": "First Period Ends",
+          "Message": "First Period over",
+          "Name": "First Period Ends",
+          "Time": 29400
+        },
+        {
+          "Description": "Second Period Starts",
+          "Message": "Second Period",
+          "Name": "Second Period Starts",
+          "Time": 29700
+        },
+        {
+          "Description": "Second Period Ends",
+          "Message": "Second Period over",
+          "Name": "Second Period Ends",
+          "Time": 32700
+        },
+        {
+          "Description": "Third Period Starts",
+          "Message": "Third Period",
+          "Name": "Third Period Starts",
+          "Time": 33300
+        },
+        {
+          "Description": "Third Period Ends",
+          "Message": "Third Period over",
+          "Name": "Third Period Ends",
+          "Time": 36300
+        },
+        {
+          "Description": "Fourth Period Starts",
+          "Message": "Fourth Period",
+          "Name": "Fourth Period Starts",
+          "Time": 36600
+        },
+        {
+          "Description": "Fourth Period Ends",
+          "Message": "Fourth Period over",
+          "Name": "Fourth Period Ends",
+          "Time": 39600
+        },
+        {
+          "Description": "Fifth Period Starts",
+          "Message": "Fifth Period",
+          "Name": "Fifth Period Starts",
+          "Time": 39900
+        },
+        {
+          "Description": "Fifth Period Early Dismissals",
+          "Message": "Fifth Period PBIS Dismissal",
+          "Name": "Fifth Period Early Dismissals",
+          "Time": 41100
+        },
+        {
+          "Description": "Fifth Period Ends",
+          "Message": "Fifth Period over",
+          "Name": "Fifth Period Ends",
+          "Time": 42900
+        },
+        {
+          "Description": "Lunch Ends",
+          "Message": "Lunch over",
+          "Name": "Lunch Ends",
+          "Time": 44700
+        },
+        {
+          "Description": "Sixth Period Starts",
+          "Message": "Sixth Period",
+          "Name": "Sixth Period Starts",
+          "Time": 45000
+        },
+        {
+          "Description": "Sixth Period Starts",
+          "Message": "Sixth Period",
+          "Name": "Sixth Period Starts",
+          "Time": 48000
+        },
+        {
+          "Description": "Assembly Starts",
+          "Message": "Assembly",
+          "Name": "Assembly Starts",
+          "Time": 48300
+        },
+        {
+          "Description": "Assembly Ends",
+          "Message": "Assembly over",
+          "Name": "Assembly Ends",
+          "Time": 51900
+        }
+      ],
+      "Name": "PBIS Day",
+      "Reason": 2,
+      "WDays": 0
+    },
+
+    {
+      "Dates": [1180327],
+      "Description": "Assembly Day",
+      "DisplayName": "Assembly Day",
+      "Events": [
+        {
+          "Description": "First Period Starts",
+          "Message": "First Period",
+          "Name": "First Period Starts",
+          "Time": 26400
+        },
+        {
+          "Description": "First Period Ends",
+          "Message": "First Period over",
+          "Name": "First Period Ends",
+          "Time": 29400
+        },
+        {
+          "Description": "Second Period Starts",
+          "Message": "Second Period",
+          "Name": "Second Period Starts",
+          "Time": 29700
+        },
+        {
+          "Description": "Second Period Ends",
+          "Message": "Second Period over",
+          "Name": "Second Period Ends",
+          "Time": 32700
+        },
+        {
+          "Description": "Third Period Starts",
+          "Message": "Third Period",
+          "Name": "Third Period Starts",
+          "Time": 33300
+        },
+        {
+          "Description": "Third Period Ends",
+          "Message": "Third Period over",
+          "Name": "Third Period Ends",
+          "Time": 36300
+        },
+        {
+          "Description": "Fourth Period Starts",
+          "Message": "Fourth Period",
+          "Name": "Fourth Period Starts",
+          "Time": 36600
+        },
+        {
+          "Description": "Fourth Period Ends",
+          "Message": "Fourth Period over",
+          "Name": "Fourth Period Ends",
+          "Time": 39600
+        },
+        {
+          "Description": "Fifth Period Starts",
+          "Message": "Fifth Period",
+          "Name": "Fifth Period Starts",
+          "Time": 39900
+        },
+        {
+          "Description": "Fifth Period Ends",
+          "Message": "Fifth Period over",
+          "Name": "Fifth Period Ends",
+          "Time": 42900
+        },
+        {
+          "Description": "Lunch Ends",
+          "Message": "Lunch over",
+          "Name": "Lunch Ends",
+          "Time": 44700
+        },
+        {
+          "Description": "Sixth Period Starts",
+          "Message": "Sixth Period",
+          "Name": "Sixth Period Starts",
+          "Time": 45000
+        },
+        {
+          "Description": "Sixth Period Ends",
+          "Message": "Sixth Period over",
+          "Name": "Sixth Period Ends",
+          "Time": 48000
+        },
+        {
+          "Description": "Assembly Starts",
+          "Message": "Assembly",
+          "Name": "Assembly Starts",
+          "Time": 48300
+        },
+        {
+          "Description": "Assembly Ends",
+          "Message": "Assembly over",
+          "Name": "Assembly Ends",
+          "Time": 51900
+        }
+      ],
+      "Name": "Assembly Day",
+      "Reason": 2,
+      "WDays": 0
+    },
+
+    {
+      "Dates": [1180418],
+      "Description": "Wild West Day",
+      "DisplayName": "Wild West",
+      "Events": [
+        {
+          "Description": "First Period Starts",
+          "Message": "First Period",
+          "Name": "First Period Starts",
+          "Time": 26400
+        },
+        {
+          "Description": "First Period Ends",
+          "Message": "First Period over",
+          "Name": "First Period Ends",
+          "Time": 28800
+        },
+        {
+          "Description": "Second Period Starts",
+          "Message": "Second Period",
+          "Name": "Second Period Starts",
+          "Time": 29100
+        },
+        {
+          "Description": "Second Period Ends",
+          "Message": "Second Period over",
+          "Name": "Second Period Ends",
+          "Time": 31500
+        },
+        {
+          "Description": "Third Period Starts",
+          "Message": "Third Period",
+          "Name": "Third Period Starts",
+          "Time": 31800
+        },
+        {
+          "Description": "Third Period Ends",
+          "Message": "Third Period over",
+          "Name": "Third Period Ends",
+          "Time": 34200
+        },
+        {
+          "Description": "Fourth Period Starts",
+          "Message": "Fourth Period",
+          "Name": "Fourth Period Starts",
+          "Time": 34500
+        },
+        {
+          "Description": "Fourth Period Ends",
+          "Message": "Fourth Period over",
+          "Name": "Fourth Period Ends",
+          "Time": 36900
+        },
+        {
+          "Description": "Fifth Period Starts",
+          "Message": "Fifth Period",
+          "Name": "Fifth Period Starts",
+          "Time": 37200
+        },
+        {
+          "Description": "Fifth Period Ends",
+          "Message": "Fifth Period over",
+          "Name": "Fifth Period Ends",
+          "Time": 39600
+        },
+        {
+          "Description": "Sixth Period Starts",
+          "Message": "Sixth Period",
+          "Name": "Sixth Period Starts",
+          "Time": 39900
+        },
+        {
+          "Description": "Sixth Period Ends",
+          "Message": "Sixth Period over",
+          "Name": "Sixth Period Ends",
+          "Time": 42300
+        },
+        {
+          "Description": "Lunch Ends",
+          "Message": "Wild West Day!",
+          "Name": "Lunch Ends",
+          "Time": 44100
+        },
+        {
+          "Description": "Weld West Day Ends",
+          "Message": "School is Over",
+          "Name": "Weld West Day Ends",
+          "Time": 51900
+        }
+      ],
+      "Name": "Wild West Day",
+      "Reason": 2,
+      "WDays": 0
+    },
+
+    {
+      "Dates": [1180710],
+      "Description": "Welcome Back Day",
+      "DisplayName": "Welcome Back!",
+      "Events": [
+        {
+          "Description": "Assembly Starts",
+          "Message": "Assembly",
+          "Name": "Assembly Starts",
+          "Time": 26400
+        },
+        {
+          "Description": "Assembly Ends",
+          "Message": "Assembly over",
+          "Name": "Assembly Ends",
+          "Time": 31800
+        },
+        {
+          "Description": "First Period Starts",
+          "Message": "First Period",
+          "Name": "First Period Starts",
+          "Time": 32100
+        },
+        {
+          "Description": "First Period Ends",
+          "Message": "First Period over",
+          "Name": "First Period Ends",
+          "Time": 35100
+        },
+        {
+          "Description": "Second Period Starts",
+          "Message": "Second Period",
+          "Name": "Second Period Starts",
+          "Time": 35400
+        },
+        {
+          "Description": "Second Period Ends",
+          "Message": "Second Period over",
+          "Name": "Second Period Ends",
+          "Time": 38100
+        },
+        {
+          "Description": "Third Period Starts",
+          "Message": "Third Period",
+          "Name": "Third Period Starts",
+          "Time": 38400
+        },
+        {
+          "Description": "Third Period Ends",
+          "Message": "Third Period over",
+          "Name": "Third Period Ends",
+          "Time": 41100
+        },
+        {
+          "Description": "Lunch Ends",
+          "Message": "Lunch over",
+          "Name": "Lunch Ends",
+          "Time": 42900
+        },
+        {
+          "Description": "Fourth Period Starts",
+          "Message": "Fourth Period",
+          "Name": "Fourth Period Starts",
+          "Time": 43200
+        },
+        {
+          "Description": "Fourth Period Ends",
+          "Message": "Fourth Period over",
+          "Name": "Fourth Period Ends",
+          "Time": 45900
+        },
+        {
+          "Description": "Fifth Period Starts",
+          "Message": "Fifth Period",
+          "Name": "Fifth Period Starts",
+          "Time": 46200
+        },
+        {
+          "Description": "Fifth Period Ends",
+          "Message": "Fifth Period over",
+          "Name": "Fifth Period Ends",
+          "Time": 48900
+        },
+        {
+          "Description": "Sixth Period Starts",
+          "Message": "Sixth Period",
+          "Name": "Sixth Period Starts",
+          "Time": 49200
+        },
+        {
+          "Description": "Sixth Period Ends",
+          "Message": "Sixth Period over",
+          "Name": "Sixth Period Ends",
+          "Time": 51900
+        }
+      ],
+      "Name": "Welcome Back Day",
+      "Reason": 2,
+      "WDays": 0
+    },
+
+    {
+      "Dates": [1180708],
+      "Description": "Staff Meeting",
+      "DisplayName": "Staff Day",
+      "Events": [
+        {
+          "Description": "Summer Tales",
+          "Message": "Summer Tales",
+          "Name": "Staff Meeting",
+          "Time": 27000
+        },
+        {
+          "Description": "AEIOU Forms",
+          "Message": "AEIOU Forms",
+          "Name": "Next Meeting",
+          "Time": 28800
+        },
+        {
+          "Description": "Happening Today",
+          "Message": "Happening Today",
+          "Name": "Next Meeting",
+          "Time": 29400
+        },
+        {
+          "Description": "WASC",
+          "Message": "WASC",
+          "Name": "Next Meeting",
+          "Time": 30000
+        },
+        {
+          "Description": "AVID",
+          "Message": "AVID",
+          "Name": "Next Meeting",
+          "Time": 30600
+        },
+        {
+          "Description": "PBIS",
+          "Message": "PBIS",
+          "Name": "Next Meeting",
+          "Time": 31500
+        },
+        {
+          "Description": "Break",
+          "Message": "Break",
+          "Name": "Upcoming Break",
+          "Time": 32400
+        },
+        {
+          "Description": "Handbooks",
+          "Message": "Handbooks",
+          "Name": "Next Meeting",
+          "Time": 33000
+        },
+        {
+          "Description": "Sharing Data",
+          "Message": "Sharing Data",
+          "Name": "Next Meeting",
+          "Time": 34200
+        },
+        {
+          "Description": "Break",
+          "Message": "Break",
+          "Name": "Upcoming Break",
+          "Time": 36000
+        },
+        {
+          "Description": "SVHS Staff Info",
+          "Message": "SVHS Staff Info",
+          "Name": "Next Meeting",
+          "Time": 36600
+        },
+        {
+          "Description": "Eligibility",
+          "Message": "Eligibility",
+          "Name": "Next Meeting",
+          "Time": 37500
+        },
+        {
+          "Description": "Safety",
+          "Message": "Safety",
+          "Name": "Next Meeting",
+          "Time": 37800
+        },
+        {
+          "Description": "Ask the Experts",
+          "Message": "Ask the Experts",
+          "Name": "Next Meeting",
+          "Time": 38700
+        },
+        {
+          "Description": "Lunch",
+          "Message": "Lunch",
+          "Name": "Upcoming Lunch",
+          "Time": 39600
+        },
+        {
+          "Description": "Cafeteria or Classrooms",
+          "Message": "",
+          "Name": "Day Complete",
+          "Time": 43200
+        },
+        {
+          "Description": "Day Over",
+          "Message": "",
+          "Name": "Day Over",
+          "Time": 52200
+        }
+      ],
+      "Name": "Staff Meeting",
+      "Reason": 2,
+      "WDays": 0
+    },
+
+    {
+      "Dates": [1180421],
+      "Description": "Finals 1",
+      "DisplayName": "Finals",
+      "Events": [
+        {
+          "Description": "Final 1 Starts",
+          "Message": "Final 1",
+          "Name": "Final 1 Starts",
+          "Time": 26400
+        },
+        {
+          "Description": "Final 1 Ends",
+          "Message": "Final 1 over",
+          "Name": "Final 1 Ends",
+          "Time": 33600
+        },
+        {
+          "Description": "Snack Break Ends",
+          "Message": "Snack Break over",
+          "Name": "Snack Break Ends",
+          "Time": 34500
+        },
+        {
+          "Description": "Final 2 Starts",
+          "Message": "Final 2",
+          "Name": "Final 2 Starts",
+          "Time": 34800
+        },
+        {
+          "Description": "Final 2 Ends",
+          "Message": "Final 2 over",
+          "Name": "Final 2 Ends",
+          "Time": 42000
+        },
+        {
+          "Description": "Lunch Ends",
+          "Message": "Lunch over",
+          "Name": "Lunch Ends",
+          "Time": 43800
+        }
+      ],
+      "Name": "Finals",
+      "Reason": 2,
+      "WDays": 0
+    },
+
+    {
+      "Dates": [1180422],
+      "Description": "Finals 2",
+      "DisplayName": "Finals",
+      "Events": [
+        {
+          "Description": "Final 3 Starts",
+          "Message": "Final 3",
+          "Name": "Final 3 Starts",
+          "Time": 26400
+        },
+        {
+          "Description": "Final 3 Ends",
+          "Message": "Final 3 over",
+          "Name": "Final 3 Ends",
+          "Time": 33600
+        },
+        {
+          "Description": "Snack Break Ends",
+          "Message": "Snack Break over",
+          "Name": "Snack Break Ends",
+          "Time": 34500
+        },
+        {
+          "Description": "Final 4 Starts",
+          "Message": "Final 4",
+          "Name": "Final 4 Starts",
+          "Time": 34800
+        },
+        {
+          "Description": "Final 4 Ends",
+          "Message": "Final 4 over",
+          "Name": "Final 4 Ends",
+          "Time": 42000
+        },
+        {
+          "Description": "Lunch Ends",
+          "Message": "Lunch over",
+          "Name": "Lunch Ends",
+          "Time": 43800
+        }
+      ],
+      "Name": "Finals",
+      "Reason": 2,
+      "WDays": 0
+    },
+
+    {
+      "Dates": [1180423],
+      "Description": "Finals 3",
+      "DisplayName": "Finals",
+      "Events": [
+        {
+          "Description": "Final 5 Starts",
+          "Message": "Final 5",
+          "Name": "Final 5 Starts",
+          "Time": 26400
+        },
+        {
+          "Description": "Final 5 Ends",
+          "Message": "Final 5 over",
+          "Name": "Final 5 Ends",
+          "Time": 33600
+        },
+        {
+          "Description": "Snack Break Ends",
+          "Message": "Snack Break over",
+          "Name": "Snack Break Ends",
+          "Time": 34500
+        },
+        {
+          "Description": "Final 6 Starts",
+          "Message": "Final 6",
+          "Name": "Final 6 Starts",
+          "Time": 34800
+        },
+        {
+          "Description": "Final 6 Ends",
+          "Message": "Final 6 over",
+          "Name": "Final 6 Ends",
+          "Time": 42000
+        },
+        {
+          "Description": "Lunch Ends",
+          "Message": "Lunch over",
+          "Name": "Lunch Ends",
+          "Time": 43800
+        }
+      ],
+      "Name": "Finals",
+      "Reason": 2,
+      "WDays": 0
+    },
+
+    {
+      "Dates": [],
+      "Description": "Normal Day",
+      "DisplayName": "Regular Day",
+      "Events": [
+        {
+          "Description": "First Period Starts",
+          "Message": "First Period",
+          "Name": "First Period Starts",
+          "Time": 26400
+        },
+        {
+          "Description": "First Period Ends",
+          "Message": "First Period over",
+          "Name": "First Period Ends",
+          "Time": 30300
+        },
+        {
+          "Description": "Second Period Starts",
+          "Message": "Second Period",
+          "Name": "Second Period Starts",
+          "Time": 30600
+        },
+        {
+          "Description": "Second Period Ends",
+          "Message": "Second Period over",
+          "Name": "Second Period Ends",
+          "Time": 34200
+        },
+        {
+          "Description": "Third Period Starts",
+          "Message": "Third Period",
+          "Name": "Third Period Starts",
+          "Time": 34800
+        },
+        {
+          "Description": "Third Period Ends",
+          "Message": "Third Period over",
+          "Name": "Third Period Ends",
+          "Time": 38400
+        },
+        {
+          "Description": "Fourth Period Starts",
+          "Message": "Fourth Period",
+          "Name": "Fourth Period Starts",
+          "Time": 38700
+        },
+        {
+          "Description": "Fourth Period Ends",
+          "Message": "Fourth Period over",
+          "Name": "Fourth Period Ends",
+          "Time": 42300
+        },
+        {
+          "Description": "Lunch Ends",
+          "Message": "Lunch over",
+          "Name": "Lunch Ends",
+          "Time": 44100
+        },
+        {
+          "Description": "Fifth Period Starts",
+          "Message": "Fifth Period",
+          "Name": "Fifth Period Starts",
+          "Time": 44400
+        },
+        {
+          "Description": "Fifth Period Ends",
+          "Message": "Fifth Period over",
+          "Name": "Fifth Period Ends",
+          "Time": 48000
+        },
+        {
+          "Description": "Sixth Period Starts",
+          "Message": "Sixth Period",
+          "Name": "Sixth Period Starts",
+          "Time": 48300
+        },
+        {
+          "Description": "Sixth Period Ends",
+          "Message": "Sixth Period over",
+          "Name": "Sixth Period Ends",
+          "Time": 51900
+        }
+      ],
+      "Name": "Normal Day",
+      "Reason": 1,
+      "WDays": 54
+    },
+
+    {
+      "Dates": [],
+      "Description": "Short Day",
+      "DisplayName": "Minimum Day",
+      "Events": [
+        {
+          "Description": "First Period Starts",
+          "Message": "First Period",
+          "Name": "First Period Starts",
+          "Time": 26400
+        },
+        {
+          "Description": "First Period Ends",
+          "Message": "First Period over",
+          "Name": "First Period Ends",
+          "Time": 28800
+        },
+        {
+          "Description": "Second Period Starts",
+          "Message": "Second Period",
+          "Name": "Second Period Starts",
+          "Time": 29100
+        },
+        {
+          "Description": "Second Period Ends",
+          "Message": "Second Period over",
+          "Name": "Second Period Ends",
+          "Time": 31440
+        },
+        {
+          "Description": "Third Period Starts",
+          "Message": "Third Period",
+          "Name": "Third Period Starts",
+          "Time": 31740
+        },
+        {
+          "Description": "Third Period Ends",
+          "Message": "Third Period over",
+          "Name": "Third Period Ends",
+          "Time": 34080
+        },
+        {
+          "Description": "Fourth Period Starts",
+          "Message": "Fourth Period",
+          "Name": "Fourth Period Starts",
+          "Time": 34380
+        },
+        {
+          "Description": "Fourth Period Ends",
+          "Message": "Fourth Period over",
+          "Name": "Fourth Period Ends",
+          "Time": 36720
+        },
+        {
+          "Description": "Fifth Period Starts",
+          "Message": "Fifth Period",
+          "Name": "Fifth Period Starts",
+          "Time": 37020
+        },
+        {
+          "Description": "Fifth Period Ends",
+          "Message": "Fifth Period over",
+          "Name": "Fifth Period Ends",
+          "Time": 39360
+        },
+        {
+          "Description": "Lunch Ends",
+          "Message": "Lunch over",
+          "Name": "Lunch Ends",
+          "Time": 41160
+        },
+        {
+          "Description": "Sixth Period Starts",
+          "Message": "Sixth Period",
+          "Name": "Sixth Period Starts",
+          "Time": 41460
+        },
+        {
+          "Description": "Sixth Period Ends",
+          "Message": "Sixth Period over",
+          "Name": "Sixth Period Ends",
+          "Time": 43800
+        }
+      ],
+      "Name": "Minimum Day",
+      "Reason": 1,
+      "WDays": 8
+    }
+  ],
+  "Timezone": -8
+}
