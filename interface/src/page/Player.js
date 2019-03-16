@@ -96,8 +96,6 @@ class Player extends Component {
       mhwidth = hwidth - 200;
     ctx.clearRect(0, 0, width, height);
     let fontsize = height / 5;
-    // ctx.fillText("01:12:58", 0, 50);
-    // this.monospace_write("01:12:58", 0, 100, 10);
 
     //  Draw the day type
     let fnum = fontsize / 3;
