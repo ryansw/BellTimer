@@ -98,7 +98,9 @@ class Player extends Component {
     let fontsize = height / 5;
 
     //  Draw the day type
-    let fnum = fontsize / 3;
+    ctx.font = 100 + "px " + this.font;
+    let fnum = mhwidth * (100 / ctx.measureText(this.dispdata.daytype).width);
+    if (fnum > fontsize / 3) fnum = fontsize / 3;
     ctx.font = fnum + "px " + this.font;
     ctx.fillText(
       this.dispdata.daytype,
