@@ -93,7 +93,7 @@ class Player extends Component {
       width = this.canvas.width,
       mwidth = width - 40,
       hwidth = width / 2,
-      mhwidth = hwidth - 200;
+      mhwidth = hwidth > 800 ? hwidth - 200 : hwidth - 20;
     ctx.clearRect(0, 0, width, height);
     let fontsize = height / 5;
 
