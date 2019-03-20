@@ -41,6 +41,25 @@ export default class Firebase {
   };
 
   // Database API
+  getSystemDetailsRef = path => {
+    return this.db.ref("Systems/" + path + "/Details");
+  };
+
+  getSchedulesDetailsRef = path => {
+    return this.db.ref("Systems/" + path + "/Schedules");
+  };
+
+  getScheduleEventsRef = (path, schedule) => {
+    return this.db.ref("Systems/" + path + "/Events/" + schedule);
+  };
+
+  getSysystemSpecialsRef = path => {
+    return this.db.ref("Systems/" + path + "/Specials");
+  };
+
+  getSysystemWeekdaysRef = path => {
+    return this.db.ref("Systems/" + path + "/Weekdays");
+  };
 }
 
 class CustomEvent {

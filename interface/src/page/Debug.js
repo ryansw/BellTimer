@@ -1,11 +1,16 @@
 import React, { Component } from "react";
-import testdata from "../testdata.json";
+import { withFirebase } from "../component/Firebase";
+import { Link } from "react-router-dom";
 
 class Player extends Component {
   constructor(props) {
     super(props);
-    if (this.props.match.params.system === "test") this.data = testdata;
+    this.firebase = this.props.firebase;
+    this.systemName = this.props.match.params.system;
+    this.scheduleName = this.props.match.params.schedule;
+
     this.update = this.update.bind(this);
+    this.changed_schedule = this.changed_schedule.bind(this);
     this.updateinteval = 0;
     this.dispdata = {
       daytype: "Regular Day",
@@ -16,72 +21,78 @@ class Player extends Component {
       curtimet: "Current Time",
       curtime: "18:00:00"
     };
-    let data = this.data;
-    console.log(this.data);
-    this.newdata = {};
-    this.newdata["Systems"] = {};
-    this.newdata["Systems"][this.data.Path] = {
-      Details: {
-        Name: this.data.Name,
-        Title: this.data.Name,
-        Description: this.data.Description
-      },
-      Schedules: {},
-      Events: {},
-      Weekdays: {
-        Sunday: false,
-        Monday: false,
-        Tuesday: false,
-        Wednesday: false,
-        Thursday: false,
-        Friday: false,
-        Saturday: false
-      },
-      Specials: {},
-      Owner: 0,
-      Editors: {}
+
+    // State setup
+    this.state = {
+      details_ready: false,
+      schedules_ready: false,
+      title: "Waiting for data",
+      schedules: [],
+      events: []
     };
-    for (let x of data.Schedules) {
-      let data = { Title: x.DisplayName, Description: x.Description };
-      this.newdata.Systems[this.data.Path].Schedules[x.Name] = data;
-      data = {};
-      for (let y of x.Events) {
-        data[y.Name] = {
-          Time: y.Time,
-          Description: y.Description,
-          Title: y.Name + " in",
-          Bottom: y.Name + " at",
-          Notice: y.Message
-        };
-      }
-      this.newdata.Systems[this.data.Path].Events[x.Name] = data;
-      if (x.Reason === 1) {
-        if (x.WDays & (1 << 0))
-          this.newdata.Systems[this.data.Path].Weekdays.Sunday = x.Name;
-        if (x.WDays & (1 << 1))
-          this.newdata.Systems[this.data.Path].Weekdays.Monday = x.Name;
-        if (x.WDays & (1 << 2))
-          this.newdata.Systems[this.data.Path].Weekdays.Tuesday = x.Name;
-        if (x.WDays & (1 << 3))
-          this.newdata.Systems[this.data.Path].Weekdays.Wednesday = x.Name;
-        if (x.WDays & (1 << 4))
-          this.newdata.Systems[this.data.Path].Weekdays.Thursday = x.Name;
-        if (x.WDays & (1 << 5))
-          this.newdata.Systems[this.data.Path].Weekdays.Friday = x.Name;
-        if (x.WDays & (1 << 6))
-          this.newdata.Systems[this.data.Path].Weekdays.Saturday = x.Name;
-      }
-      if (x.Reason === 2) {
-        for (let y of x.Dates) {
-          this.newdata.Systems[this.data.Path].Specials[y] = x.Name;
-        }
-      }
-    }
-    console.log(this.newdata);
+
+    // DB interaction functions
+    this.onDetailChange = this.onDetailChange.bind(this);
+    this.onSchedulesDetailsChange = this.onSchedulesDetailsChange.bind(this);
+    this.onScheduleEventsChange = this.onScheduleEventsChange.bind(this);
+
+    // DB interaction setup
+    this.DetailsRef = this.firebase.getSystemDetailsRef(
+      this.props.match.params.system
+    );
+    this.DetailsRef.on("value", this.onDetailChange);
+
+    this.SchedulesDetailsRef = this.firebase.getSchedulesDetailsRef(
+      this.props.match.params.system
+    );
+    this.SchedulesDetailsRef.on("value", this.onSchedulesDetailsChange);
+
+    this.ScheduleEventsRef = this.firebase.getScheduleEventsRef(
+      this.systemName,
+      this.scheduleName
+    );
+    this.ScheduleEventsRef.on("value", this.onScheduleEventsChange);
   }
 
+  onDetailChange = details => {
+    if (details.exists()) {
+      this.setState({
+        title: details.val().Title
+      });
+    } else
+      this.setState({
+        title: "Not available."
+      });
+  };
+
+  onSchedulesDetailsChange = schedules => {
+    let scheduledetails = [];
+    for (let a in schedules.val()) {
+      let o = schedules.val()[a];
+      o.Name = a;
+      scheduledetails.push(o);
+    }
+    this.setState({
+      schedules: scheduledetails
+    });
+  };
+
+  onScheduleEventsChange = events => {
+    let eventdetails = [];
+    for (let a in events.val()) {
+      let o = events.val()[a];
+      o.Name = a;
+      eventdetails.push(o);
+    }
+    this.setState({
+      events: eventdetails.sort((a, b) => {
+        return a.Time > b.Time;
+      })
+    });
+  };
+
   update = () => {
-    console.log("Update called");
+    // console.log("Update called");
   };
 
   componentDidMount() {
@@ -89,36 +100,69 @@ class Player extends Component {
   }
 
   componentWillUnmount() {
+    // Clear the updater loop
     clearInterval(this.updateinteval);
+    console.log("test");
+    // Clear the callback refs
+    this.DetailsRef.off();
+    this.SchedulesDetailsRef.off();
+    this.ScheduleEventsRef.off();
   }
+
+  changed_schedule = () => {
+    this.ScheduleEventsRef.off();
+    this.scheduleName = this.props.match.params.schedule;
+    this.ScheduleEventsRef = this.firebase.getScheduleEventsRef(
+      this.systemName,
+      this.scheduleName
+    );
+    this.ScheduleEventsRef.on("value", this.onScheduleEventsChange);
+  };
 
   render() {
     return (
       <div className="Debug">
         <b>{this.props.match.params.system}</b>
         <br />
-        Herein goes the debugger! <br />
-        this.data:
+        <b>{this.props.match.params.schedule}</b>
         <br />
-        <div style={{ wordWrap: "break-word" }}>
-          {" "}
-          {JSON.stringify(this.data)}{" "}
+        <b>{this.state.title}</b>
+        <br />
+        <div id="schedule_links">
+          {this.state.schedules.map(
+            function(comp, i) {
+              return (
+                <span>
+                  <Link
+                    to={"/debug/" + this.systemName + "/" + comp.Name}
+                    key={"Schedule" + i}
+                    onClick={this.changed_schedule}
+                  >
+                    {comp.Name}
+                  </Link>
+                  <br />
+                </span>
+              );
+            }.bind(this)
+          )}
         </div>
-        this.dispdata:
         <br />
-        <div style={{ wordWrap: "break-word" }}>
-          {" "}
-          {JSON.stringify(this.dispdata)}{" "}
-        </div>
-        this.newdata:
-        <br />
-        <div style={{ wordWrap: "break-word" }}>
-          {" "}
-          {JSON.stringify(this.newdata)}{" "}
+        <div id="events">
+          {this.state.events.map(
+            function(comp, i) {
+              console.log(comp);
+              return (
+                <span>
+                  {comp.Name}
+                  <br />
+                </span>
+              );
+            }.bind(this)
+          )}
         </div>
       </div>
     );
   }
 }
 
-export default Player;
+export default withFirebase(Player);
