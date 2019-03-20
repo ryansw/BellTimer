@@ -204,7 +204,6 @@ class Player extends Component {
           height={document.documentElement.clientHeight}
           style={{ padding: 0, margin: 0 }}
         />
-        //TODO: Add the settings gear and mute icon
       </div>
     );
   }
