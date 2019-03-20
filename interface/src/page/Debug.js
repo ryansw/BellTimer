@@ -95,6 +95,17 @@ class Player extends Component {
     // console.log("Update called");
   };
 
+  componentWillReceiveProps(newprops) {
+    this.scheduleName = newprops.match.params.schedule;
+    this.ScheduleEventsRef.off();
+    this.scheduleName = this.props.match.params.schedule;
+    this.ScheduleEventsRef = this.firebase.getScheduleEventsRef(
+      this.systemName,
+      this.scheduleName
+    );
+    this.ScheduleEventsRef.on("value", this.onScheduleEventsChange);
+  }
+
   componentDidMount() {
     this.updateinteval = setInterval(this.update, 200);
   }
@@ -109,15 +120,7 @@ class Player extends Component {
     this.ScheduleEventsRef.off();
   }
 
-  changed_schedule = () => {
-    this.ScheduleEventsRef.off();
-    this.scheduleName = this.props.match.params.schedule;
-    this.ScheduleEventsRef = this.firebase.getScheduleEventsRef(
-      this.systemName,
-      this.scheduleName
-    );
-    this.ScheduleEventsRef.on("value", this.onScheduleEventsChange);
-  };
+  changed_schedule = () => {};
 
   render() {
     return (
@@ -132,12 +135,8 @@ class Player extends Component {
           {this.state.schedules.map(
             function(comp, i) {
               return (
-                <span>
-                  <Link
-                    to={"/debug/" + this.systemName + "/" + comp.Name}
-                    key={"Schedule" + i}
-                    onClick={this.changed_schedule}
-                  >
+                <span key={"Schedule" + i}>
+                  <Link to={"/debug/" + this.systemName + "/" + comp.Name}>
                     {comp.Name}
                   </Link>
                   <br />
@@ -148,17 +147,14 @@ class Player extends Component {
         </div>
         <br />
         <div id="events">
-          {this.state.events.map(
-            function(comp, i) {
-              console.log(comp);
-              return (
-                <span>
-                  {comp.Name}
-                  <br />
-                </span>
-              );
-            }.bind(this)
-          )}
+          {this.state.events.map(function(comp, i) {
+            return (
+              <span key={"Event" + i}>
+                {comp.Name}
+                <br />
+              </span>
+            );
+          })}
         </div>
       </div>
     );
