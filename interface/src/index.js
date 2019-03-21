@@ -6,6 +6,7 @@ import Landing from "./page/Landing";
 import NotFound from "./page/NotFound";
 import Player from "./page/Player";
 import Debug from "./page/Debug";
+import Settings from "./page/Settings";
 
 ReactDOM.render(
   <FirebaseContext.Provider value={new Firebase()}>
@@ -14,6 +15,7 @@ ReactDOM.render(
         <Route exact path={"/"} component={Landing} />
         <Route path={"/play/:system"} component={Player} />
         <Route path={"/debug/:system/:schedule?"} component={Debug} />
+        <Route path={"/set"} component={Settings} />
         <Route component={NotFound} />
       </Switch>
     </Router>
