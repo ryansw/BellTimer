@@ -15,7 +15,17 @@ ReactDOM.render(
         <Route exact path={"/"} component={Landing} />
         <Route path={"/play/:system"} component={Player} />
         <Route path={"/debug/:system/:schedule?"} component={Debug} />
-        <Route path={"/set"} component={Settings} />
+        <Route
+          exact
+          path={[
+            "/set",
+            "/set/:system",
+            "/set/:system/details",
+            "/set/:system/schedule/:schedule",
+            "/set/:system/date/:date"
+          ]}
+          component={Settings}
+        />
         <Route component={NotFound} />
       </Switch>
     </Router>
