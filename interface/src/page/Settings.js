@@ -26,7 +26,7 @@ class Settings extends Component {
             <Link to="/play">Viewer</Link>
           </li>
         </ul>
-        <Link to="/set/system/svhs">SVHS Test Link</Link>
+        <Link to="/set/svhs">SVHS Test Link</Link>
         <Calendar />
       </div>
     );
@@ -35,9 +35,9 @@ class Settings extends Component {
   render() {
     return (
       <div>
-        <h1>Timer Settings</h1>
+        <h1>Timer Settings WIP</h1>
         Sign in and sign out will be up here.
-        <br />
+        <hr />
         <Route
           exact
           path="/set"

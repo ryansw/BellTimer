@@ -15,7 +15,7 @@ let Datemark = props => {
         background: "#dddddd"
       }}
       onClick={() => {
-        if (props.onClick) props.onClick(props.number, props.current);
+        if (props.onClick) props.onClick(props.number, props.month);
       }}
     >
       {props.number}

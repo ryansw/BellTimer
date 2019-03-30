@@ -31,27 +31,13 @@ class Calendar extends Component {
     this.dateclicked = this.dateclicked.bind(this);
   }
 
-  componentWillReceiveProps(newprops) {}
-
-  dateclicked = (number, current) => {
-    if (!current) {
-      let nm = this.state.month;
-      let ny = this.state.year;
-      if (number < 7) nm++;
-      else nm--;
-      if (nm < 0) {
-        ny--;
-        nm = 11;
-      }
-      if (nm > 11) {
-        ny++;
-        nm = 0;
-      }
-      this.setState({
-        month: nm,
-        year: ny
-      });
+  dateclicked = (number, month) => {
+    let year = this.state.year;
+    if (month !== this.state.month) {
+      if (month === 0 && this.state.month === 11) year++;
+      if (month === 11 && this.state.month === 0) year--;
     }
+    this.props.onClick(year + "-" + (month + 1) + "-" + number);
   };
 
   render() {
@@ -68,16 +54,19 @@ class Calendar extends Component {
       let roww = [];
       for (let col = 0; col < 7; col++) {
         let c = {
+          month: this.state.month,
           current: true,
           number: col + row * 7 - startday + 1
         };
         if (c.number > monthlength)
           c = {
+            month: (this.state.month + 1) % 12,
             current: false,
             number: c.number % monthlength
           };
         if (c.number < 1)
           c = {
+            month: (this.state.month + 11) % 12,
             current: false,
             number: c.number + pmonthlength
           };
@@ -85,10 +74,50 @@ class Calendar extends Component {
       }
       dates.push(roww);
     }
-    console.log(monthlength, startday, rows, dates);
+
     return (
       <div className="Calendar">
+        <span
+          onClick={() => {
+            let nm = this.state.month - 1;
+            let ny = this.state.year;
+            if (nm < 0) {
+              ny--;
+              nm = 11;
+            }
+            if (nm > 11) {
+              ny++;
+              nm = 0;
+            }
+            this.setState({
+              month: nm,
+              year: ny
+            });
+          }}
+        >
+          Back
+        </span>
         {monthName[this.state.month]} {this.state.year}
+        <span
+          onClick={() => {
+            let nm = this.state.month + 1;
+            let ny = this.state.year;
+            if (nm < 0) {
+              ny--;
+              nm = 11;
+            }
+            if (nm > 11) {
+              ny++;
+              nm = 0;
+            }
+            this.setState({
+              month: nm,
+              year: ny
+            });
+          }}
+        >
+          Forward
+        </span>
         <table>
           <tbody>
             {dates.map((comp, i) => {
