@@ -1,6 +1,13 @@
 import React from "react";
 
 let Datemark = props => {
+  let classes = ["CalDate"];
+  if (props.LastMo) classes.push("CalLastMo");
+  if (props.NextMo) classes.push("CalNextMo");
+  if (props.Passed) classes.push("CallPassed");
+  let TheDate = props.Date || new Date();
+  return <div className={classes.join(" ")}> {TheDate.getDate()}</div>;
+
   let color = "#000000";
   if (!props.current) color = "#aaaaaa";
   return (
