@@ -5,6 +5,7 @@ import Firebase, { FirebaseContext } from "./component/Firebase";
 import Landing from "./page/Landing";
 import NotFound from "./page/NotFound";
 import Player from "./page/Player";
+import GridPlayer from "./page/GridPlayer";
 import Debug from "./page/Debug";
 import Settings from "./page/Settings";
 
@@ -16,6 +17,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path={"/"} component={Landing} />
         <Route path={"/play/:system"} component={Player} />
+        <Route path={"/play2/:system"} component={GridPlayer} />=
         <Route path={"/debug/:system/:schedule?"} component={Debug} />
         <Route
           exact

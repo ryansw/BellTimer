@@ -1,0 +1,137 @@
+.GridPlayer {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  min-height: 800px;
+  background-color: darkblue;
+  font-size: fit-width;
+  overflow: hidden;
+}
+
+.GridPlayer .Buttons {
+  display: block;
+  width: 100%;
+  height: 10%;
+  background-color: blueviolet;
+  min-height: 100px;
+}
+
+.GridPlayer .DayType {
+  display: block;
+  width: 100%;
+  height: 10%;
+  background-color: darkgreen;
+  min-height: 100px;
+}
+
+.GridPlayer .MainTime {
+  display: block;
+  width: 100%;
+  height: 40%;
+  background-color: darkred;
+  min-height: 300px;
+}
+
+.GridPlayer .NextTime {
+  display: block;
+  width: 100%;
+  height: 20%;
+  background-color: darkcyan;
+  min-height: 150px;
+}
+
+.GridPlayer .CurrentTime {
+  display: block;
+  width: 100%;
+  height: 20%;
+  background-color: darkmagenta;
+  min-height: 150px;
+}
+
+@media (max-height: 800px) {
+  .GridPlayer {
+    overflow-y: visible;
+    overflow-x: hidden;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 800px) {
+  .GridPlayer {
+    display: grid;
+    grid-template-areas:
+      "Buttons DayType"
+      "MainTime MainTime"
+      "NextTime CurrentTime";
+    grid-template-rows: 1fr 5fr 2fr;
+    grid-gap: 5px 5px;
+  }
+
+  .GridPlayer .Buttons {
+    grid-area: Buttons;
+    /* display: block; */
+    height: 100%;
+  }
+
+  .GridPlayer .DayType {
+    grid-area: DayType;
+    height: 100%;
+  }
+
+  .GridPlayer .MainTime {
+    grid-area: MainTime;
+    height: 100%;
+  }
+
+  .GridPlayer .NextTime {
+    grid-area: NextTime;
+    height: 100%;
+  }
+
+  .GridPlayer .CurrentTime {
+    grid-area: CurrentTime;
+    height: 100%;
+  }
+}
+
+/* Scaled SVG Text */
+.ScaledText {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.ScaledText svg {
+  /* display: inline-block; */
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  overflow: none;
+  display: none;
+  /* background-color: #000; */
+}
+.ScaledText Text {
+  transform: translate(40px, 202px);
+  font-size: 124px;
+  fill: #000;
+}
+
+/* Nice Clock */
+.NiceClock {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.NiceClock .ClockTitle {
+  display: block;
+  width: 100%;
+  height: 30%;
+  background-color: rgba(128, 128, 0, 0.5);
+}
+.NiceClock .ClockBody {
+  display: block;
+  width: 100%;
+  height: 70%;
+  background-color: rgba(0, 128, 128, 0.5);
+}
