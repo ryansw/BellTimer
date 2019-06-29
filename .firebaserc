@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "belltimer-prod"
+    "prod": "belltimer-prod",
+    "dev": "belltimer-prod"
   }
 }
