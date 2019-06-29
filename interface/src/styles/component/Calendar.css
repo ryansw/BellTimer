@@ -1,0 +1,66 @@
+.Calendar {
+  width: calc(100% - 4px);
+  max-width: 900px;
+  border: 2px blue dashed;
+  border-radius: 15px 15px 0 0;
+  background-color: skyblue;
+}
+
+.Calendar .CalHeader {
+  width: calc(100% -44px);
+  display: flex;
+  justify-content: center;
+  min-height: 1em;
+  background-color: lightskyblue;
+  border: 2px blue dashed;
+  margin: -2px -2px 0 -2px;
+  border-radius: 15px;
+  /* padding: 0.5em 20px 0.5em 20px; */
+}
+
+.Calendar .CalHeader .CalPrev {
+  text-align: left;
+  cursor: pointer;
+  padding: 0.5em 5px 0.5em 20px;
+}
+
+.Calendar .CalHeader .CalTitle {
+  flex-grow: 1;
+  text-align: center;
+  padding: 0.5em 0 0.5em 0;
+}
+
+.Calendar .CalHeader .CalNext {
+  text-align: right;
+  cursor: pointer;
+  padding: 0.5em 20px 0.5em 5px;
+}
+
+.Calendar .CalBody {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 3px;
+}
+
+.Calendar .CalBody .CalDate {
+  background-color: lightblue;
+  min-height: 4em;
+  padding: 5px;
+}
+
+.Calendar .CalBody .CalDate.CalLastMo,
+.Calendar .CalBody .CalDate.CalNextMo {
+  background-color: lightgreen;
+}
+
+.Calendar .CalBody .CalDate.CalPassed {
+  background-color: lightcyan;
+}
+
+.Calendar .CalBody .CalDate.CalToday {
+  border: 1px seagreen dashed;
+  padding: 4px;
+  background-color: aqua;
+}
