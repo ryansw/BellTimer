@@ -8,6 +8,8 @@ import Player from "./page/Player";
 import Debug from "./page/Debug";
 import Settings from "./page/Settings";
 
+import "./styles/Global.css";
+
 ReactDOM.render(
   <FirebaseContext.Provider value={new Firebase()}>
     <Router>
